@@ -1,0 +1,20 @@
+---------- VIRTUAL ENV ----------
+
+virtualenv --python=/usr/bin/python2.7 backend_NAT
+
+
+---------- DATABASE ----------
+
+CREATE USER NAT_admin PASSWORD 'NAT123';
+CREATE DATABASE NAT_db OWNER NAT_admin;
+GRANT ALL PRIVILEGES ON DATABASE NAT_db TO NAT_admin;
+
+
+---------- REQUIREMENTS ----------
+
+pip install -r requirements.txt
+
+---------- STATICS ----------
+
+cd static
+bower install
